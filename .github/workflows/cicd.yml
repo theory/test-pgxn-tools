@@ -5,10 +5,10 @@ jobs:
   bundle:
     name: Bundle
     runs-on: ubuntu-latest
-    container: pgxn/pgxn-tools:1.4
+    container: pgxn/pgxn-tools:_testing_do_not_use
     steps:
     - uses: actions/checkout@v4
     - run: pgxn-bundle
     - run: env
-    - run: git rev-parse --is-inside-work-tree || true
+    # - run: git rev-parse --is-inside-work-tree || true
     - run: git config safe.directory
