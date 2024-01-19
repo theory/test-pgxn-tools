@@ -1,0 +1,11 @@
+name: 🧪 Test PGXN Bundle
+on:
+  push:
+jobs:
+  bundle:
+    name: Bundle
+    runs-on: ubuntu-latest
+    container: pgxn/pgxn-tools:1.4
+    steps:
+    - uses: actions/checkout@v4
+    - run: pgxn-bundle
