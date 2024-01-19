@@ -9,3 +9,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: pgxn-bundle
+    - run: echo $PWD
+    - run: git rev-parse --is-inside-work-tree || true
+    - run: git config safe.directory
