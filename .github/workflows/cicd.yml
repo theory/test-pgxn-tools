@@ -9,6 +9,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     # - run: pgxn-bundle
-    # - run: git rev-parse --is-inside-work-tree || true
-    - run: env
-    - run: git config safe.directory
+    - run: git archive -v --format zip --prefix foo/ --output foo.zip HEAD
