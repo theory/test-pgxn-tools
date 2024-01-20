@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     container: alpine/git
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v3
     # - run: git archive -v --format zip --prefix foo/ --output foo.zip HEAD
-    - run: git config --global --add safe.directory "$PWD"
+    # - run: git config --global --add safe.directory "$PWD"
     - run: git config safe.directory
     - run: git archive -v --format zip --prefix foo/ --output foo.zip HEAD
