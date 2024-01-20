@@ -9,6 +9,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     # - run: pgxn-bundle
-    - run: cat /tmp/entrypoint.txt
     # - run: git rev-parse --is-inside-work-tree || true
-    # - run: git config safe.directory
+    - run: git config safe.directory
