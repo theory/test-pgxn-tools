@@ -1,12 +1,14 @@
-name: 🧪 Test PGXN Bundle
+name: Test Git
 on:
   push:
 jobs:
   bundle:
-    name: Bundle
+    name: Git
     runs-on: ubuntu-latest
     container: alpine/git
     steps:
     - uses: actions/checkout@v4
-    - run: git config safe.directory
     - run: git archive -v --format zip --prefix foo/ --output foo.zip HEAD
+    # - run: git config --system --add safe.directory "$PWD"
+    # - run: git config safe.directory
+    # - run: git archive -v --format zip --prefix foo/ --output foo.zip HEAD
