@@ -5,8 +5,7 @@ jobs:
   bundle:
     name: Bundle
     runs-on: ubuntu-latest
-    container: pgxn/pgxn-tools:_testing_do_not_use
+    container: alpine/git
     steps:
-    - uses: actions/checkout@v2
-    # - run: pgxn-bundle
+    - uses: actions/checkout@v4
     - run: git archive -v --format zip --prefix foo/ --output foo.zip HEAD
