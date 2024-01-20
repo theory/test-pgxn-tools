@@ -8,4 +8,5 @@ jobs:
     container: alpine/git
     steps:
     - uses: actions/checkout@v4
+    - run: git config safe.directory
     - run: git archive -v --format zip --prefix foo/ --output foo.zip HEAD
