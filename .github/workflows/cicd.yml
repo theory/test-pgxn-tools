@@ -10,4 +10,5 @@ jobs:
     - uses: actions/checkout@v4
     # - run: pgxn-bundle
     # - run: git rev-parse --is-inside-work-tree || true
+    - run: env
     - run: git config safe.directory
