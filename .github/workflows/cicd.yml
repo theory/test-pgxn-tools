@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     container: pgxn/pgxn-tools:_testing_do_not_use
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     # - run: pgxn-bundle
     - run: git archive -v --format zip --prefix foo/ --output foo.zip HEAD
