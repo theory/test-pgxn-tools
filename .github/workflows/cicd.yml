@@ -5,10 +5,7 @@ jobs:
   bundle:
     name: Git
     runs-on: ubuntu-latest
-    container: alpine/git
+    container: pgxn/pgxn-tools:_testing_do_not_use
     steps:
-    - uses: actions/checkout@v2
-    # - run: git archive -v --format zip --prefix foo/ --output foo.zip HEAD
-    # - run: git config --global --add safe.directory "$PWD"
-    - run: git config safe.directory
+    - uses: actions/checkout@v4
     - run: git archive -v --format zip --prefix foo/ --output foo.zip HEAD
