@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: alpine
-      options: "--user nobody"
+      options: "--user runner"
     steps:
     - uses: actions/checkout@v4
     - run: ls -lah
